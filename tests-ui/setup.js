@@ -11,7 +11,7 @@ async function setup() {
 		try {
 			await new Promise((res, rej) => {
 				http
-					.get("http://127.0.0.1:8188/object_info", (resp) => {
+					.get("http://127.0.0.1:8183/object_info", (resp) => {
 						let data = "";
 						resp.on("data", (chunk) => {
 							data += chunk;

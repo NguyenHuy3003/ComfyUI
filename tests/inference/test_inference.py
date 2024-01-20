@@ -62,7 +62,7 @@ class ComfyClient:
 
     def connect(self, 
                     listen:str = '127.0.0.1', 
-                    port:Union[str,int] = 8188,
+                    port:Union[str,int] = 8183,
                     client_id: str = str(uuid.uuid4())
                     ):
         self.client_id = client_id

@@ -1,0 +1,16 @@
+** ComfyUI startup time: 2024-01-14 09:15:47.344926
+** Platform: Windows
+** Python version: 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]
+** Python executable: C:\Users\huy\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+** Log path: C:\Users\huy\Desktop\ComfyUI_windows_portable\ComfyUI\comfyui.log
+
+Prestartup times for custom nodes:
+   0.0 seconds: C:\Users\huy\Desktop\ComfyUI_windows_portable\ComfyUI\custom_nodes\rgthree-comfy
+   0.1 seconds: C:\Users\huy\Desktop\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Manager
+
+Traceback (most recent call last):
+  File "C:\Users\huy\Desktop\ComfyUI_windows_portable\ComfyUI\main.py", line 73, in <module>
+    import comfy.utils
+  File "C:\Users\huy\Desktop\ComfyUI_windows_portable\ComfyUI\comfy\utils.py", line 1, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

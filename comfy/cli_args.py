@@ -34,7 +34,7 @@ class EnumAction(argparse.Action):
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--listen", type=str, default="127.0.0.1", metavar="IP", nargs="?", const="0.0.0.0", help="Specify the IP address to listen on (default: 127.0.0.1). If --listen is provided without an argument, it defaults to 0.0.0.0. (listens on all)")
-parser.add_argument("--port", type=int, default=8188, help="Set the listen port.")
+parser.add_argument("--port", type=int, default=8183, help="Set the listen port.")
 parser.add_argument("--enable-cors-header", type=str, default=None, metavar="ORIGIN", nargs="?", const="*", help="Enable CORS (Cross-Origin Resource Sharing) with optional origin or allow all with default '*'.")
 parser.add_argument("--max-upload-size", type=float, default=100, help="Set the maximum upload size in MB.")
 
@@ -65,8 +65,6 @@ fpvae_group = parser.add_mutually_exclusive_group()
 fpvae_group.add_argument("--fp16-vae", action="store_true", help="Run the VAE in fp16, might cause black images.")
 fpvae_group.add_argument("--fp32-vae", action="store_true", help="Run the VAE in full precision fp32.")
 fpvae_group.add_argument("--bf16-vae", action="store_true", help="Run the VAE in bf16.")
-
-parser.add_argument("--cpu-vae", action="store_true", help="Run the VAE on the CPU.")
 
 fpte_group = parser.add_mutually_exclusive_group()
 fpte_group.add_argument("--fp8_e4m3fn-text-enc", action="store_true", help="Store text encoder weights in fp8 (e4m3fn variant).")
@@ -111,8 +109,6 @@ parser.add_argument("--quick-test-for-ci", action="store_true", help="Quick test
 parser.add_argument("--windows-standalone-build", action="store_true", help="Windows standalone build: Enable convenient things that most people using the standalone windows build will probably enjoy (like auto opening the page on startup).")
 
 parser.add_argument("--disable-metadata", action="store_true", help="Disable saving prompt metadata in files.")
-
-parser.add_argument("--multi-user", action="store_true", help="Enables per-user storage.")
 
 if comfy.options.args_parsing:
     args = parser.parse_args()
